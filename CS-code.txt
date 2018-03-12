@@ -111,6 +111,4 @@ int i = Convert.ToInt32("chuoi s");
 14. HTML Webroser
 webBrowser1.Url = new Uri("duong dan toi file html");
 
-
-15.zzzz
-
+16. zzzzzz

@@ -1,1 +1,116 @@
-f
+Code C#
+1.// code open file
+System.Diagnostics.Process.Start(@"Link file .exe"); 
+hoac
+	System.Diagnostics.Process prc = new System.Diagnostics.Process();
+            prc.StartInfo.FileName = "đường dẫn tới file"  ; 	// vd: "D:"
+            prc.Start();
+cách 2
+    OpenFileDialog chuc = new OpenFileDialog();  //new thư mục 
+            chuc.InitialDirectory = @"E:\" ;	//hiển thị ổ đĩa
+            chuc.ShowDialog();			//Hiển thị file
+
+2. // hiện từng cửa sổ chữ
+   string[] xuat = {"","" };
+   foreach (string _xuat in xuat) MessageBox.Show(_xuat);
+
+3. // vi tri chuot
+   a = Cursor.Position.X;  
+   b = Cursor.Position.Y;
+
+4.//vi tri button
+_x = button2.Location.X;    
+  _y = button2.Location.Y;
+
+5.//code hien chu tu tu
+private void timer1_Tick(object sender, EventArgs e)    
+        { 
+		if (i < str.Length)
+            	{	str2 += str[i];
+              	label2.Text = str2;
+              	i++; 
+		}
+	 }
+6.//code thay doi vi tri khi kich chuot 
+private void button2_Click(object sender, EventArgs e)  
+        {
+            x = rand.Next(0, 400);
+            y = rand.Next(0, 120);
+            button2.Location = new Point(x, y);
+        }
+
+7. // chèn nhạc
+Ví dụ sử dụng mã này cho .mp3:
+
+WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+wplayer.URL = "My MP3 file.mp3";
+wplayer.Controls.Play();
+
+Sau đó chỉ đặt wplayer.Controls.Play (); 		Trong sự kiện Button_Click.
+
+Ví dụ sử dụng mã này cho .wav:
+
+System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+player.SoundLocation = "Sound.wav";
+player.Play();
+
+Đặt  player.Play(); 	Trong sự kiện Button_Click và nó sẽ hoạt động.
+
+8. // nut khoi dong
+        private void ShutDown_Click(object sender, EventArgs e)
+        {
+            //shutdown
+            System.Diagnostics.Process.Start("shutdown.exe", "-s -t 0");
+        }
+
+        private void Restart_Click(object sender, EventArgs e)
+        {
+            //restart
+            System.Diagnostics.Process.Start("shutdown.exe", "-r -t 0");
+        }
+
+        private void Sleep_Click(object sender, EventArgs e)
+        {
+            //log off
+            System.Diagnostics.Process.Start("shutdown.exe", "-i -t 0");
+        }
+9.//sao chep noi dung giua 2 form
+
+Alarm canhbao = new Alarm();
+            canhbao.NoiDung2(NoiDung.Text);             //sao chep noi dung
+            canhbao.Show();
+
+10.//combox hien thi ban dau
+ private void Form1_Load(object sender, EventArgs e)
+        {
+     CheDo.SelectedIndex = CheDo.FindStringExact("At");  //combox hien thi ban dau
+        }
+11. //Chuyen string sang int:
+
+Diem=int.Parse(SoDiem.Text);
+
+int i = int.parse(label5.Text.ToString());
+hoặc 
+int i = Convert.ToInt16("chuoi s");
+int i = Convert.ToInt32("chuoi s");
+
+12.// chuột trái, chuột phải:
+ if (e.Button == System.Windows.Forms.MouseButtons.Right) { MessageBox.Show("Right click"); }
+            if (e.Button == System.Windows.Forms.MouseButtons.Left) { MessageBox.Show("Left click"); }
+
+13. //code GameOver messageBox nhiều lựa chọn
+            DialogResult   resultGame =MessageBox.Show("Số điểm của bạn là " +SoDiem.Text.ToString()+", bạn muốn chơi lại không?", "GameOver",
+                MessageBoxButtons.YesNo);
+            if (resultGame == DialogResult.Yes)
+            {
+                System.Diagnostics.Process.Start(Application.ExecutablePath); // to start new instance of application
+                this.Close(); //to turn off current app
+            }
+            else this.Close();
+
+14. HTML Webroser
+webBrowser1.Url = new Uri("duong dan toi file html");
+
+
+  
+

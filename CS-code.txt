@@ -1,4 +1,4 @@
-Code C#
+﻿Code C#
 1.// code open file
 System.Diagnostics.Process.Start(@"Link file .exe"); 
 hoac
@@ -112,5 +112,5 @@ int i = Convert.ToInt32("chuoi s");
 webBrowser1.Url = new Uri("duong dan toi file html");
 
 
-  
+  15. sua
 
